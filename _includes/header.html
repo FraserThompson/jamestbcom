@@ -21,10 +21,12 @@
           <li><a href="/">gallery</a></li>
           {% endif %}
           {% for thing in site.pages %}
-            {% if page.active == thing.title %}
-            <li class="active"><a href="{{thing.permalink}}">{{thing.title}}</a></li>
-            {% else %}
-            <li><a href="{{thing.permalink}}">{{thing.title}}</a></li>
+            {% if thing.title %}
+              {% if page.active == thing.title %}
+              <li class="active"><a href="{{thing.permalink}}">{{thing.title}}</a></li>
+              {% else %}
+              <li><a href="{{thing.permalink}}">{{thing.title}}</a></li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
