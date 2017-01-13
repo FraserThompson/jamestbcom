@@ -172,6 +172,20 @@ li.active {
     }
 }
 
+/**
+* Masonry
+*/
+.grid {
+    column-count: 2;
+    column-gap: 1em;
+}
+
+.grid-item {
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
 
 /**
  * Misc
