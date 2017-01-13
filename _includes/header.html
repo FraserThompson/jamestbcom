@@ -18,7 +18,7 @@
           {% if page.active == "gallery" %}
           <li class="active"><a href="{{ site.baseurl }}">gallery</a></li>
           {% else %}
-          <li><a href="/">gallery</a></li>
+          <li><a href="{{ site.baseurl }}">gallery</a></li>
           {% endif %}
           {% for thing in site.pages %}
             {% if thing.title %}
