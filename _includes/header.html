@@ -16,16 +16,16 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           {% if page.active == "gallery" %}
-          <li class="active"><a href="/">gallery</a></li>
+          <li class="active"><a href="{{ site.baseurl }}">gallery</a></li>
           {% else %}
           <li><a href="/">gallery</a></li>
           {% endif %}
           {% for thing in site.pages %}
             {% if thing.title %}
               {% if page.active == thing.title %}
-              <li class="active"><a href="{{thing.permalink}}">{{thing.title}}</a></li>
+              <li class="active"><a href="{{site.baseurl}}{{thing.permalink}}">{{thing.title}}</a></li>
               {% else %}
-              <li><a href="{{thing.permalink}}">{{thing.title}}</a></li>
+              <li><a href="{{site.baseurl}}{{thing.permalink}}">{{thing.title}}</a></li>
               {% endif %}
             {% endif %}
           {% endfor %}
