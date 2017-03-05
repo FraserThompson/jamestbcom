@@ -19,5 +19,3 @@ defaults:
 collections:
   art:
     output: true
-  pages:
-    output: true
