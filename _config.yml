@@ -11,8 +11,11 @@ defaults:
       path: ""
       type: art
     values:
-      active: gallery
+      active: portfolio
       layout: art
+      medium: Unspecified
+      size: Unspecified
+      price: Unspecified
 collections:
   art:
     output: true

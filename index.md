@@ -1,6 +1,6 @@
 ---
 layout: default
-active: gallery
+active: portfolio
 ---
 
 <div class="home">
