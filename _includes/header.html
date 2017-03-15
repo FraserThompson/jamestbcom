@@ -3,23 +3,18 @@
   <h1 href="{{ site.baseurl }}/">Art by James TB</h1>
 </div>
 <nav class="nav navbar-toggleable-md navbar-light">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="navbar-collapse collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      {% if page.active == "portfolio" %}
-      <li class="nav-item active"><a class="nav-link" href="/">portfolio</a></li>
+  <ul class="navbar-nav mr-auto">
+    {% if page.active == "portfolio" %}
+    <li class="nav-item active"><a class="nav-link" href="/">portfolio</a></li>
+    {% else %}
+    <li class="nav-item"><a class="nav-link" href="/">portfolio</a></li>
+    {% endif %}
+    {% for thing in site.pages %}
+      {% if page.active == thing.title %}
+      <li class="nav-item active"><a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a></li>
       {% else %}
-      <li class="nav-item"><a class="nav-link" href="/">portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a></li>
       {% endif %}
-      {% for thing in site.pages %}
-        {% if page.active == thing.title %}
-        <li class="nav-item active"><a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a></li>
-        {% else %}
-        <li class="nav-item"><a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+    {% endfor %}
+  </ul>
 </nav>
