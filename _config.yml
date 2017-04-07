@@ -6,6 +6,7 @@ baseurl: ""
 url: "https:/jamestb.com"
 markdown: kramdown
 permalink: pretty
+repository: FraserThompson/jamestbcom
 defaults:
   - scope:
       path: ""
