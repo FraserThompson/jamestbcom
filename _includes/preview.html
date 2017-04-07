@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" data-masonry='{ "itemSelector": ".art-tile", "columnWidth": ".art-tile" }'>>
 {% for post in site.art %}
     <div class="col-xs-12 col-lg-6 art-tile">
         <a href="{{ post.url | prepend: site.baseurl }}">
