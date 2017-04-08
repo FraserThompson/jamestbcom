@@ -1,4 +1,14 @@
 <script src="/assets/js/masonry.pkgd.min.js"></script>
+<script src="/assets/js/blazy.min.js"></script>
+
+<script>
+    (function() {
+        var bLazy = new Blazy({ 'offset': 100, 'success': function() {
+            window.dispatchEvent(new Event('resize'));
+            var msnry = new Masonry( '#art-tiles', { "itemSelector": ".art-tile", "columnWidth": ".art-tile" });
+        }});
+    })();
+</script>
 
 <footer class="site-footer">
 
