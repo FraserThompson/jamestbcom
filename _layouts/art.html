@@ -13,7 +13,7 @@ layout: default
       <h2 class="post-title">{{ page.title }}</h2>
     </header>
     <p>{{page.size}}</p>
-    <p>{{page.price}}</p>
+    <p>{% if page.price %}{{page.price}}{% else %}Contact for sale{% endif %}</p>
     <p>{{page.medium}}</p>
     {{ page.description }}
   </article>
