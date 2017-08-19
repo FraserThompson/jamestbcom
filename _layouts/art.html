@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post container">
 
-  <article class="post-content row">
+  <article class="post-content row text-center">
     <div class="mx-auto">
       <a title="{{page.title}}" href="/assets/img/{{ page.image }}_large.jpg"><img src="/assets/img/{{ page.image }}_small.jpg" style="max-height: 80vh; max-width: 100%; width: auto;"></a>
     </div>
@@ -12,11 +12,12 @@ layout: default
       <h2 class="post-title">{{ page.title }}</h2>
     </div>
 
-    <div class="col-12">
+    <div class="col-12 post-metadata">
       <p>{{page.size}}</p>
       <p>{% if page.price %}{{page.price}}{% else %}Contact for sale{% endif %}</p>
       <p>{{page.medium}}</p>
     </div>
+
     <div class="col-12">
       <p>{{ content }}</p>
     </div>

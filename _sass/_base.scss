@@ -39,10 +39,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
-h1 {
-    font-size: $header-font-size;
-}
-
 img {
     width: 100%;
 }
@@ -71,6 +67,10 @@ a {
     &:hover {
         transform: scale(1.01, 1.01);
     }
+}
+
+.post-metadata {
+    padding-top: 20px;
 }
 
 .sidebar {
