@@ -1,20 +1,16 @@
+<h1 href="{{ site.baseurl }}/">Art by James Thomson-Bache</h1>
 
-<div class="row">
-  <h1 href="{{ site.baseurl }}/">Art by James TB</h1>
-</div>
-<nav class="nav navbar-toggleable-md navbar-light">
-  <ul class="navbar-nav mr-auto">
-    {% if page.active == "portfolio" %}
-    <li class="nav-item active"><a class="nav-link" href="/">portfolio</a></li>
-    {% else %}
-    <li class="nav-item"><a class="nav-link" href="/">portfolio</a></li>
+<nav class="nav justify-content-center">
+  {% if page.active == "portfolio" %}
+  <a class="nav-link active" href="/" style="padding-left: 0px;">portfolio</a>
+  {% else %}
+  <a class="nav-link" href="/" style="padding-left: 0px;">portfolio</a>
+  {% endif %}
+  {% for thing in site.pages %}
+    {% if page.active == thing.title %}
+    <a class="nav-link active" href="{{thing.permalink}}">{{thing.title}}</a>
+    {% elsif thing.title %}
+    <a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a>
     {% endif %}
-    {% for thing in site.pages %}
-      {% if page.active == thing.title %}
-      <li class="nav-item active"><a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a></li>
-      {% else %}
-      <li class="nav-item"><a class="nav-link" href="{{thing.permalink}}">{{thing.title}}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  {% endfor %}
 </nav>

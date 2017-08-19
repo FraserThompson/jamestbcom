@@ -5,4 +5,4 @@ active: contact
 permalink: /contact/
 ---
 
-me@jamestb.com
+<a href="mailt: jamesthomsonbache@gmail.com">jamesthomsonbache@gmail.com</a>

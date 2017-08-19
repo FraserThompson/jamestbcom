@@ -8,6 +8,10 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+.header {
+    padding-top: 10px;
+}
+
 
 /**
  * Basic styling
@@ -36,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 8vw;
+    font-size: $header-font-size;
 }
 
 img {
@@ -51,17 +55,22 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: lighten($brand-color, 30%);
     }
 
     &:hover {
-        color: $text-color;
+        color: lighten($text-color, 60%);
         text-decoration: underline;
     }
 }
 
 .art-tile {
     padding: 20px;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.01, 1.01);
+    }
 }
 
 .sidebar {
