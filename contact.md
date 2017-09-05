@@ -5,4 +5,6 @@ active: contact
 permalink: /contact/
 ---
 
-me@jamestb.com
+For sales/commissions contact <a href="mailto: jamesthomsonbache@gmail.com">jamesthomsonbache@gmail.com</a>.
+
+All prices negotiable.

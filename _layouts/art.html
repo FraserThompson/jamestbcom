@@ -1,21 +1,26 @@
 ---
 layout: default
 ---
-<div class="post">
-  <div class="post-nav">
-    <a href="/">Back to gallery</a>
-  </div>
+<div class="post container">
 
-  <article class="post-content">
-    <center><a title="{{page.title}}" href="/assets/img/{{ page.image }}_large.jpg"><img src="/assets/img/{{ page.image }}_small.jpg" style="max-height: 80vh; max-width: 100%; width: auto;"></a></center>
+  <article class="post-content row text-center">
+    <div class="mx-auto">
+      <a title="{{page.title}}" href="/assets/img/{{ page.image }}_large.jpg"><img src="/assets/img/{{ page.image }}_small.jpg" style="max-height: 80vh; max-width: 100%; width: auto;"></a>
+    </div>
 
-    <header class="post-header">
+    <div class="col-12 post-header">
       <h2 class="post-title">{{ page.title }}</h2>
-    </header>
-    <p>{{page.size}}</p>
-    <p>{% if page.price %}{{page.price}}{% else %}Contact for sale{% endif %}</p>
-    <p>{{page.medium}}</p>
-    {{ page.description }}
+    </div>
+
+    <div class="col-12 post-metadata">
+      <p>{{page.size}}</p>
+      <p>{% if page.price %}{{page.price}}{% else %}Contact for sale{% endif %}</p>
+      <p>{{page.medium}}</p>
+    </div>
+
+    <div class="col-12">
+      <p>{{ content }}</p>
+    </div>
   </article>
 
 </div>

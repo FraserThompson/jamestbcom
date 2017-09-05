@@ -1,6 +1,6 @@
 <div id="art-tiles" class="row">
 {% for post in site.art %}
-    <div class="col-xs-12 col-lg-6 art-tile">
+    <div class="col-xs-6 col-md-4 col-lg-4 art-tile">
         <a href="{{ post.url | prepend: site.baseurl }}">
             <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/assets/img/{{post.image}}_small.jpg" alt="{{post.title}}"/>
         </a>
